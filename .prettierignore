@@ -1,6 +1,7 @@
 build
 dist
 out
+*.yaml
 # 如果你不希望 prettier 检查代码文件的话
 # *.ts
 # *.tsx
