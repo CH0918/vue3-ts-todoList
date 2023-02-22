@@ -6,7 +6,7 @@ module.exports = {
   // 每一行结尾需要有分号
   semi: true,
   // 使用单引号
-  singleQuote: true,
+  singleQuote: false,
   // 在对象属性中，仅在必要时才使用引号，如 "prop-foo"
   quoteProps: 'as-needed',
   // 在 jsx 中使用双引号
@@ -20,5 +20,5 @@ module.exports = {
   // 箭头函数仅有一个参数时也需要括号，如 (arg) => {}
   // 使用 crlf 作为换行符
   endOfLine: 'crlf',
-}
+};
 
