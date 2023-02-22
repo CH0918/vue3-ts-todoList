@@ -16,7 +16,7 @@
     "lint:fix": "npm run eslint:fix && npm run prettier:fix"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,ts,tsx.vue}": [
       "eslint --cache --fix",
       "prettier --write --list-different"
     ],
