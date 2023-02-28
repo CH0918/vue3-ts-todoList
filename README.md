@@ -64,3 +64,20 @@ resolve: {
     '.eslint-auto-import.json',
   ],
 ```
+
+4. unplugin-component-vite 自动引入组件相关配置
+
+```ts
+import Components from 'unplugin-vue-components/vite'
+  Components({
+      extensions: ['vue', 'md', 'svg'],
+      // directoryAsNamespace: true,
+      include: [/\.vue$/, /\.md$/],
+      dts: true,
+      resolvers: [ElementPlusResolver({})],
+      dirs: [
+        path.resolve(__dirname, './src/layout'),
+        path.resolve(__dirname, './src/components'),
+      ],
+    }),
+```
