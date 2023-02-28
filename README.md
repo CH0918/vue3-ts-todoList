@@ -41,3 +41,26 @@ resolve: {
     parser: '@typescript-eslint/parser',
   },
 ```
+
+3. 使用 unplugin-auto-import 时 eslint,ts 检测报错
+
+```ts
+// vite.config.ts
+  AutoImport({
+      dts: './auto-imports.d.ts',
+    }),
+```
+
+```json
+// tsconfig.json
+  "include": [
+    "./auto-imports.d.ts"
+  ],
+```
+
+```js
+// .eslintrc.cjs
+  extends: [
+    '.eslint-auto-import.json',
+  ],
+```

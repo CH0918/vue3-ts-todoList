@@ -15,6 +15,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:@typescript-eslint/recommended',
     'prettier', // 避免跟eslint冲突
+    './.eslintrc-auto-import.json', // 解决自动导入的eslint报错
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
