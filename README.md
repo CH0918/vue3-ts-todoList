@@ -103,3 +103,11 @@ Icons({
     ],
   })
 ```
+
+引入路径`~icons/ep/moon`会找不到这个模块，需要配置下`tsconfig.json`的类型：
+
+```json
+"compilerOptions": {
+  "types": ["unplugin-icons/types/vue"]
+}
+```
