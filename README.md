@@ -2,6 +2,7 @@
 
 - vue3
 - vue+router
+- vite
 - ts
 - pinia
 - element-plus
@@ -80,4 +81,25 @@ import Components from 'unplugin-vue-components/vite'
         path.resolve(__dirname, './src/components'),
       ],
     }),
+```
+
+5. unplugin-icon 自动引入 icons 图标
+   需要的图标可以去[图标库](https://icones.js.org)找，海量图标
+
+```ts
+// vite.config.ts
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+Icons({
+  // 图标按需引入，用到哪个自动安装哪个图标集
+  autoInstall: true,
+}),
+  Components({
+    resolvers: [
+      // 添加前缀，使用需要<icon-xxxxx> xxx是图标集的id
+      IconsResolver({
+        prefix: 'icon',
+      }),
+    ],
+  })
 ```

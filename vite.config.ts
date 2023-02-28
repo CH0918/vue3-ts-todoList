@@ -4,6 +4,9 @@ import path from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -20,11 +23,19 @@ export default defineConfig({
       // directoryAsNamespace: true,
       include: [/\.vue$/, /\.md$/],
       dts: true,
-      resolvers: [ElementPlusResolver({})],
+      resolvers: [
+        ElementPlusResolver(),
+        IconsResolver({
+          prefix: 'icon',
+        }),
+      ],
       dirs: [
         path.resolve(__dirname, './src/layout'),
         path.resolve(__dirname, './src/components'),
       ],
+    }),
+    Icons({
+      autoInstall: true,
     }),
   ],
   resolve: {
