@@ -29,4 +29,13 @@ module.exports = {
     'vue/multi-word-component-names': 'off',
     'no-debugger': 'error',
   },
-};
+  ignorePatterns: [
+    'dist-electron/',
+    '.output/',
+    'dist/',
+    'public/',
+    '**/*.min.js',
+    '**/*.d.ts',
+    '**/*.config.ts',
+  ],
+}
