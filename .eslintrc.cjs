@@ -20,6 +20,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    parser: '@typescript-eslint/parser',
   },
 
   // 激活插件，如果需要更改rules的话需要写，不写的话只能用插件提供的规则，在上面extends中写的plugin:xxxxxx
