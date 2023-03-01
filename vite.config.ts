@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      include: [/\.vue$/, /\.vue\?vue/],
+      include: [/\.vue$/, /\.vue\?vue/, /\.ts/],
       imports: ['vue'],
       dts: './auto-imports.d.ts',
       vueTemplate: true,
